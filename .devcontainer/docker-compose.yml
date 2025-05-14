@@ -1,0 +1,9 @@
+services:
+    gh-leaf:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ..:/workspace
+        tty: true
+        stdin_open: true

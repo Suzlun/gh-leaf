@@ -1,0 +1,32 @@
+{
+    "name": "gh-leaf",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "gh-leaf",
+    "workspaceFolder": "/workspace/leafs",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "James-Yu.latex-workshop", 
+                "tomoki1207.pdf"
+            ],
+            "settings": {
+                "workbench.preferredLanguage": "ja",
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "latexmk",
+                        "command": "latexmk",
+                        "args": ["%DOC%"],
+                        "env": {}
+                    }
+                ],
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "default",
+                        "tools": ["latexmk"]
+                    }
+                ]
+            }
+        } 
+    },
+    "postCreateCommand": "/bin/sh .devcontainer/setup.sh"
+}
